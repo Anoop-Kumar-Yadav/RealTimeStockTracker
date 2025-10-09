@@ -1,0 +1,11 @@
+
+pandas==2.2.3
+yfinance==0.2.44
+pymysql==1.1.1
+mysql-connector-python==9.0.0
+
+
+python-dotenv==1.0.1  
+
+
+
