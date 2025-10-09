@@ -1,0 +1,198 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" font-family="Arial" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">Real-Time Stock Tracker</text>
+  <text x="600" y="85" font-family="Arial" font-size="20" fill="#93c5fd" text-anchor="middle">System Architecture</text>
+  
+  <!-- Layer 1: Presentation Layer -->
+  <rect x="50" y="120" width="1100" height="200" rx="15" fill="#4c1d95" stroke="#a78bfa" stroke-width="3"/>
+  <text x="80" y="155" font-family="Arial" font-size="22" font-weight="bold" fill="#d8b4fe">PRESENTATION LAYER</text>
+  
+  <!-- PyQt5 Client -->
+  <rect x="80" y="170" width="500" height="130" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <circle cx="120" cy="205" r="25" fill="#7c3aed"/>
+  <text x="120" y="215" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">P</text>
+  <text x="160" y="205" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">PyQt5 Desktop App</text>
+  <text x="160" y="225" font-family="Arial" font-size="13" fill="#94a3b8">client/app.py</text>
+  <text x="100" y="250" font-family="Arial" font-size="13" fill="#cbd5e1">• Company search and autocomplete</text>
+  <text x="100" y="270" font-family="Arial" font-size="13" fill="#cbd5e1">• Stock information display</text>
+  <text x="100" y="290" font-family="Arial" font-size="13" fill="#cbd5e1">• Watchlist management UI</text>
+  
+  <!-- Power BI -->
+  <rect x="620" y="170" width="500" height="130" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <circle cx="660" cy="205" r="25" fill="#eab308"/>
+  <text x="660" y="215" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">B</text>
+  <text x="700" y="205" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Power BI Dashboard</text>
+  <text x="700" y="225" font-family="Arial" font-size="13" fill="#94a3b8">Visualization Layer</text>
+  <text x="640" y="250" font-family="Arial" font-size="13" fill="#cbd5e1">• Real-time price charts</text>
+  <text x="640" y="270" font-family="Arial" font-size="13" fill="#cbd5e1">• Historical trend analysis</text>
+  <text x="640" y="290" font-family="Arial" font-size="13" fill="#cbd5e1">• Technical indicators</text>
+  
+  <!-- Arrow Down 1 -->
+  <line x1="600" y1="330" x2="600" y2="370" stroke="#60a5fa" stroke-width="4"/>
+  <polygon points="600,370 590,355 610,355" fill="#60a5fa"/>
+  
+  <!-- Layer 2: API Layer -->
+  <rect x="50" y="380" width="1100" height="180" rx="15" fill="#1e3a8a" stroke="#60a5fa" stroke-width="3"/>
+  <text x="80" y="415" font-family="Arial" font-size="22" font-weight="bold" fill="#93c5fd">API LAYER</text>
+  
+  <!-- FastAPI -->
+  <rect x="80" y="430" width="1040" height="110" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+  <circle cx="120" cy="465" r="25" fill="#2563eb"/>
+  <text x="120" y="475" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">F</text>
+  <text x="160" y="465" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">FastAPI Backend</text>
+  <text x="160" y="485" font-family="Arial" font-size="13" fill="#94a3b8">tracker/backend_api.py</text>
+  
+  <!-- API Endpoints Row 1 -->
+  <rect x="160" y="500" width="180" height="28" rx="5" fill="#334155"/>
+  <text x="170" y="520" font-family="Arial" font-size="12" fill="#22c55e" font-weight="bold">GET</text>
+  <text x="210" y="520" font-family="Arial" font-size="12" fill="#cbd5e1">/watchlist/all</text>
+  
+  <rect x="360" y="500" width="200" height="28" rx="5" fill="#334155"/>
+  <text x="370" y="520" font-family="Arial" font-size="12" fill="#22c55e" font-weight="bold">GET</text>
+  <text x="410" y="520" font-family="Arial" font-size="12" fill="#cbd5e1">/watchlist/active</text>
+  
+  <rect x="580" y="500" width="180" height="28" rx="5" fill="#334155"/>
+  <text x="590" y="520" font-family="Arial" font-size="12" fill="#3b82f6" font-weight="bold">POST</text>
+  <text x="635" y="520" font-family="Arial" font-size="12" fill="#cbd5e1">/watchlist/add</text>
+  
+  <rect x="780" y="500" width="160" height="28" rx="5" fill="#334155"/>
+  <text x="790" y="520" font-family="Arial" font-size="12" fill="#ef4444" font-weight="bold">DEL</text>
+  <text x="830" y="520" font-family="Arial" font-size="12" fill="#cbd5e1">/remove</text>
+  
+  <rect x="960" y="500" width="150" height="28" rx="5" fill="#334155"/>
+  <text x="970" y="520" font-family="Arial" font-size="12" fill="#eab308" font-weight="bold">PUT</text>
+  <text x="1010" y="520" font-family="Arial" font-size="12" fill="#cbd5e1">/toggle</text>
+  
+  <!-- Arrow Down 2 -->
+  <line x1="600" y1="570" x2="600" y2="610" stroke="#34d399" stroke-width="4"/>
+  <polygon points="600,610 590,595 610,595" fill="#34d399"/>
+  
+  <!-- Layer 3: Business Logic Layer -->
+  <rect x="50" y="620" width="1100" height="250" rx="15" fill="#064e3b" stroke="#34d399" stroke-width="3"/>
+  <text x="80" y="655" font-family="Arial" font-size="22" font-weight="bold" fill="#6ee7b7">BUSINESS LOGIC LAYER</text>
+  
+  <!-- Data Fetcher -->
+  <rect x="80" y="670" width="340" height="180" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <circle cx="115" cy="700" r="22" fill="#059669"/>
+  <text x="115" y="710" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="150" y="700" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Data Fetcher</text>
+  <text x="150" y="718" font-family="Arial" font-size="12" fill="#94a3b8">api_fetcher.py</text>
+  <text x="100" y="745" font-family="Arial" font-size="13" fill="#cbd5e1">• yfinance API</text>
+  <text x="100" y="765" font-family="Arial" font-size="13" fill="#cbd5e1">• Alpha Vantage API</text>
+  <text x="100" y="785" font-family="Arial" font-size="13" fill="#cbd5e1">• Stock data retrieval</text>
+  <text x="100" y="805" font-family="Arial" font-size="13" fill="#cbd5e1">• Real-time updates</text>
+  <text x="100" y="825" font-family="Arial" font-size="13" fill="#cbd5e1">• Price monitoring</text>
+  
+  <!-- Indicator Calculator -->
+  <rect x="430" y="670" width="340" height="180" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <circle cx="465" cy="700" r="22" fill="#059669"/>
+  <text x="465" y="710" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">I</text>
+  <text x="500" y="700" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">Indicator Calculator</text>
+  <text x="500" y="718" font-family="Arial" font-size="12" fill="#94a3b8">indicator_calculator.py</text>
+  <text x="450" y="745" font-family="Arial" font-size="13" fill="#cbd5e1">• SMA calculation</text>
+  <text x="450" y="765" font-family="Arial" font-size="13" fill="#cbd5e1">• RSI calculation</text>
+  <text x="450" y="785" font-family="Arial" font-size="13" fill="#cbd5e1">• Technical analysis</text>
+  <text x="450" y="805" font-family="Arial" font-size="13" fill="#cbd5e1">• Trend detection</text>
+  <text x="450" y="825" font-family="Arial" font-size="13" fill="#cbd5e1">• Signal generation</text>
+  
+  <!-- DB Manager -->
+  <rect x="780" y="670" width="340" height="180" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <circle cx="815" cy="700" r="22" fill="#059669"/>
+  <text x="815" y="710" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">M</text>
+  <text x="850" y="700" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff">DB Manager</text>
+  <text x="850" y="718" font-family="Arial" font-size="12" fill="#94a3b8">db_manager.py</text>
+  <text x="800" y="745" font-family="Arial" font-size="13" fill="#cbd5e1">• CRUD operations</text>
+  <text x="800" y="765" font-family="Arial" font-size="13" fill="#cbd5e1">• Data persistence</text>
+  <text x="800" y="785" font-family="Arial" font-size="13" fill="#cbd5e1">• Query handling</text>
+  <text x="800" y="805" font-family="Arial" font-size="13" fill="#cbd5e1">• Transaction mgmt</text>
+  <text x="800" y="825" font-family="Arial" font-size="13" fill="#cbd5e1">• Data validation</text>
+  
+  <!-- Arrow Down 3 -->
+  <line x1="600" y1="880" x2="600" y2="920" stroke="#fb923c" stroke-width="4"/>
+  <polygon points="600,920 590,905 610,905" fill="#fb923c"/>
+  
+  <!-- Layer 4: Scheduler and Data Layer -->
+  <!-- Scheduler -->
+  <rect x="50" y="930" width="540" height="230" rx="15" fill="#7c2d12" stroke="#fb923c" stroke-width="3"/>
+  <text x="80" y="965" font-family="Arial" font-size="22" font-weight="bold" fill="#fdba74">SCHEDULER LAYER</text>
+  
+  <rect x="80" y="980" width="480" height="160" rx="10" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+  <circle cx="120" cy="1020" r="25" fill="#ea580c"/>
+  <text x="120" y="1030" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Q</text>
+  <text x="160" y="1020" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">Java Quartz Scheduler</text>
+  <text x="160" y="1040" font-family="Arial" font-size="13" fill="#94a3b8">Spring Boot + Quartz</text>
+  <text x="100" y="1070" font-family="Arial" font-size="13" fill="#cbd5e1">• Automated task execution</text>
+  <text x="100" y="1090" font-family="Arial" font-size="13" fill="#cbd5e1">• Market close triggers</text>
+  <text x="100" y="1110" font-family="Arial" font-size="13" fill="#cbd5e1">• Executes main.py script</text>
+  
+  <!-- Database -->
+  <rect x="610" y="930" width="540" height="230" rx="15" fill="#7f1d1d" stroke="#f87171" stroke-width="3"/>
+  <text x="640" y="965" font-family="Arial" font-size="22" font-weight="bold" fill="#fca5a5">DATA LAYER</text>
+  
+  <rect x="640" y="980" width="480" height="160" rx="10" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+  <circle cx="680" cy="1020" r="25" fill="#dc2626"/>
+  <text x="680" y="1030" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="720" y="1020" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff">MySQL Database</text>
+  <text x="720" y="1040" font-family="Arial" font-size="13" fill="#94a3b8">Relational Storage</text>
+  
+  <rect x="660" y="1060" width="435" height="30" rx="5" fill="#334155"/>
+  <text x="670" y="1080" font-family="Arial" font-size="13" fill="#f87171" font-weight="bold">watchlist</text>
+  <text x="750" y="1080" font-family="Arial" font-size="12" fill="#94a3b8">id, symbol, active, created_at</text>
+  
+  <rect x="660" y="1100" width="435" height="30" rx="5" fill="#334155"/>
+  <text x="670" y="1120" font-family="Arial" font-size="13" fill="#f87171" font-weight="bold">stocks</text>
+  <text x="730" y="1120" font-family="Arial" font-size="12" fill="#94a3b8">id, symbol, date, OHLC, volume, sma, rsi</text>
+  
+  <!-- Data Flow Section -->
+  <rect x="50" y="1190" width="1100" height="240" rx="15" fill="#312e81" stroke="#818cf8" stroke-width="3"/>
+  <text x="80" y="1225" font-family="Arial" font-size="22" font-weight="bold" fill="#a5b4fc">DATA FLOW</text>
+  
+  <!-- Flow Step 1 -->
+  <rect x="80" y="1240" width="250" height="160" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="205" y="1280" font-family="Arial" font-size="42" text-anchor="middle">1</text>
+  <text x="205" y="1320" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">User Input</text>
+  <text x="205" y="1345" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">Search and add stocks</text>
+  <text x="205" y="1365" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">via PyQt5 interface</text>
+  <text x="205" y="1385" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">Watchlist management</text>
+  
+  <!-- Flow Step 2 -->
+  <rect x="350" y="1240" width="250" height="160" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="475" y="1280" font-family="Arial" font-size="42" text-anchor="middle">2</text>
+  <text x="475" y="1320" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">API Processing</text>
+  <text x="475" y="1345" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">FastAPI validates</text>
+  <text x="475" y="1365" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">and stores data</text>
+  <text x="475" y="1385" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">in MySQL database</text>
+  
+  <!-- Flow Step 3 -->
+  <rect x="620" y="1240" width="250" height="160" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="745" y="1280" font-family="Arial" font-size="42" text-anchor="middle">3</text>
+  <text x="745" y="1320" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Scheduled Fetch</text>
+  <text x="745" y="1345" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">Quartz triggers</text>
+  <text x="745" y="1365" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">data fetch and</text>
+  <text x="745" y="1385" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">indicator calculations</text>
+  
+  <!-- Flow Step 4 -->
+  <rect x="890" y="1240" width="250" height="160" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="1015" y="1280" font-family="Arial" font-size="42" text-anchor="middle">4</text>
+  <text x="1015" y="1320" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Visualization</text>
+  <text x="1015" y="1345" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">Power BI displays</text>
+  <text x="1015" y="1365" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">updated charts</text>
+  <text x="1015" y="1385" font-family="Arial" font-size="13" fill="#94a3b8" text-anchor="middle">and trends</text>
+  
+  <!-- Footer -->
+  <text x="600" y="1480" font-family="Arial" font-size="16" fill="#94a3b8" text-anchor="middle">Real-Time Stock Tracker and Watchlist Manager</text>
+  <text x="600" y="1510" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Built with love by Anoop Kumar Yadav</text>
+  
+  <!-- Technology Stack -->
+  <text x="150" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">PyQt5</text>
+  <text x="270" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">FastAPI</text>
+  <text x="390" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">Python 3.8+</text>
+  <text x="530" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">Java Quartz</text>
+  <text x="670" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">MySQL</text>
+  <text x="780" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">yfinance</text>
+  <text x="890" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">Power BI</text>
+  <text x="1010" y="1550" font-family="Arial" font-size="13" fill="#cbd5e1">Spring Boot</text>
+</svg>
