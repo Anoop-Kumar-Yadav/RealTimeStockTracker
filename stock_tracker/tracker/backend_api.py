@@ -18,6 +18,18 @@ app.add_middleware(
 
 db = DBManager()
 
+import requests
+
+def trigger_scheduler():
+    try:
+        resp = requests.post("http://localhost:8081/api/scheduler/trigger-python-job")
+    except Exception as e:
+        print("Failed to trigger scheduler:", e)
+
+# Call this after your stock data is inserted/updated
+
+
+
 # ----------------- Pydantic models -----------------
 class SymbolRequest(BaseModel):
     symbol: str
@@ -44,7 +56,9 @@ def get_all_watchlist():
 def add_to_watchlist(req: SymbolRequest):
     success = db.add_to_watchlist(req.symbol.upper())
     if success["status"]:
+        trigger_scheduler()
         return {"message": f"{req.symbol.upper()} added in watchlist"}
+
     else:
         raise HTTPException(status_code=500, detail=f"Failed to add {req.symbol.upper()}")
 
@@ -52,6 +66,7 @@ def add_to_watchlist(req: SymbolRequest):
 def remove_from_watchlist(req: SymbolRequest):
     success = db.remove_from_watchlist(req.symbol.upper())
     if success:
+        trigger_scheduler()
         return {"message": f"{req.symbol.upper()} removed from watchlist"}
     else:
         raise HTTPException(status_code=500, detail=f"Failed to remove {req.symbol.upper()}")
@@ -60,6 +75,7 @@ def remove_from_watchlist(req: SymbolRequest):
 def toggle_watchlist_status(req: SymbolRequest):
     success = db.toggle_watchlist_status(req.symbol.upper())
     if success:
+        trigger_scheduler()
         return {"message": f"{req.symbol.upper()} active status toggled"}
     else:
         raise HTTPException(status_code=500, detail=f"Failed to toggle status for {req.symbol.upper()}")
