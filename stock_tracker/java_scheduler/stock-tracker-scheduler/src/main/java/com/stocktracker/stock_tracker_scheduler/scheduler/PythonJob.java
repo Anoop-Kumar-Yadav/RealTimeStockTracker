@@ -20,8 +20,8 @@ public class PythonJob implements Job {
             }
 
 
-            String projectDir = System.getProperty("user.dir"); // current working directory
-            String scriptPath = projectDir + "\\stock_tracker\\tracker\\main.py";
+            String projectDir = System.getProperty("user.dir"); 
+            String scriptPath = projectDir + "\\..\\..\\tracker\\main.py";
 
 
             System.out.println("🔹 Executing: " + pythonExe + " " + scriptPath);
