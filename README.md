@@ -9,9 +9,10 @@
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture and Data Flow
    
    ![Architecture Diagram](https://github.com/Anoop-Kumar-Yadav/RealTimeStockTracker/raw/main/readme_resources/screenshots/architecture.svg)
+   ![Architecture Diagram](https://github.com/Anoop-Kumar-Yadav/RealTimeStockTracker/raw/main/readme_resources/screenshots/RealTimeStockTracker.drawio.png)
 ### Component Details
 
 **1. Client (Frontend) - PyQt5**
